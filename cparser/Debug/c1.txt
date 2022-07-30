@@ -1,0 +1,55 @@
+
+>>> Áõ¿¡»Ô 2020141460029 Syntax error at line 6: unexpected token -> )
+
+>>> Áõ¿¡»Ô 2020141460029 Syntax error at line 7: unexpected token ->{
+      CMINUS PARSING:
+
+Syntax tree:
+  FuncK
+    IntK
+    IdK: max
+    ParamsK
+      ParamK
+        IntK
+        IdK: x
+      ParamK
+        IntK
+        IdK: y
+      ParamK
+        IntK
+        IdK: z
+    CompK
+      Var_DeclK
+        IntK
+        IdK: result
+      If
+        Op: >
+          IdK: x
+          Op: +
+            IdK: y
+        CompK
+          Assign
+            IdK: result
+            IdK: x
+          If
+            Op: >
+              IdK: z
+              IdK: result
+            CompK
+              Assign
+                IdK: result
+                IdK: z
+        CompK
+          Assign
+            IdK: result
+            IdK: y
+          If
+            Op: >
+              IdK: z
+              IdK: result
+            CompK
+              Assign
+                IdK: result
+                IdK: z
+      Return
+        IdK: result

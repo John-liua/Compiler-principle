@@ -1,0 +1,7 @@
+﻿  Building Custom Rule C:/Users/Administrator/Desktop/cparser/CMakeLists.txt
+  main.cpp
+  parse.cpp
+  scan.cpp
+  util.cpp
+  正在生成代码...
+  cparser.vcxproj -> C:\Users\Administrator\Desktop\cparser\Debug\cparser.exe

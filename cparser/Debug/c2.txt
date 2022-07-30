@@ -1,0 +1,185 @@
+
+>>> Áõ¿¡»Ô 2020141460029 Syntax error at line 66: unexpected token ->ERROR: !
+      
+>>> Áõ¿¡»Ô 2020141460029 Syntax error at line 66: unexpected token -> ERROR: !
+
+>>> Áõ¿¡»Ô 2020141460029 Syntax error at line 66: unexpected token ->=
+      
+>>> Áõ¿¡»Ô 2020141460029 Syntax error at line 66: unexpected token ->=
+      
+>>> Áõ¿¡»Ô 2020141460029 Syntax error at line 66: Code ends before file
+CMINUS PARSING:
+
+Syntax tree:
+  Var_DeclK
+    IntK
+    Arry_DeclK
+      IdK: Array
+      ConstK: 10
+  FuncK
+    IntK
+    IdK: findByBinary
+    ParamsK
+      ParamK
+        IntK
+        IdK: array
+        IdK:
+      ParamK
+        IntK
+        IdK: size
+      ParamK
+        IntK
+        IdK: number
+    CompK
+      Var_DeclK
+        IntK
+        IdK: low
+      Var_DeclK
+        IntK
+        IdK: high
+      Var_DeclK
+        IntK
+        IdK: mid
+      Var_DeclK
+        IntK
+        IdK: notfound
+      Assign
+        IdK: low
+        ConstK: 0
+      Assign
+        IdK: high
+        Op: -
+          IdK: size
+          ConstK: 1
+      Assign
+        IdK: notfound
+        Op: -
+          ConstK: 0
+          ConstK: 1
+      While
+        Op: <=
+          IdK: low
+          IdK: high
+        CompK
+          Assign
+            IdK: mid
+            Op: +
+              IdK: low
+              Op: /
+                Op: -
+                  IdK: high
+                  IdK: low
+                ConstK: 2
+          If
+            Op: ==
+              Arry_ElemK
+                IdK: array
+                IdK: low
+              IdK: number
+            CompK
+              Return
+                IdK: low
+          If
+            Op: ==
+              Arry_ElemK
+                IdK: array
+                IdK: high
+              IdK: number
+            CompK
+              Return
+                IdK: high
+          If
+            Op: ==
+              Arry_ElemK
+                IdK: array
+                IdK: mid
+              IdK: number
+            CompK
+              Return
+                IdK: mid
+          If
+            Op: <
+              Arry_ElemK
+                IdK: array
+                IdK: mid
+              IdK: number
+            CompK
+              Assign
+                IdK: low
+                Op: +
+                  IdK: mid
+                  ConstK: 1
+            CompK
+              Assign
+                IdK: high
+                Op: -
+                  IdK: mid
+                  ConstK: 1
+      Return
+        IdK: notfound
+  FuncK
+    VoidK
+    IdK: sortBySelection
+    ParamsK
+      ParamK
+        IntK
+        IdK: array
+        IdK:
+      ParamK
+        IntK
+        IdK: size
+    CompK
+      Var_DeclK
+        IntK
+        IdK: i
+      Var_DeclK
+        IntK
+        IdK: k
+      Var_DeclK
+        IntK
+        IdK: min
+      Var_DeclK
+        IntK
+        IdK: temp
+      Assign
+        IdK: i
+        ConstK: 0
+      While
+        Op: <
+          IdK: i
+          Op: -
+            IdK: size
+            ConstK: 1
+        CompK
+          Assign
+            IdK: min
+            IdK: i
+          Assign
+            IdK: k
+            Op: +
+              IdK: i
+              ConstK: 1
+          While
+            Op: <
+              IdK: k
+              IdK: size
+            CompK
+              If
+                Op: <
+                  Arry_ElemK
+                    IdK: array
+                    IdK: k
+                  Arry_ElemK
+                    IdK: array
+                    IdK: min
+                CompK
+                  Assign
+                    IdK: min
+                    IdK: k
+              Assign
+                IdK: k
+                Op: +
+                  IdK: k
+                  ConstK: 1
+          If
+            IdK: min
